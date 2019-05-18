@@ -69,22 +69,15 @@
                                     <navigationItem title="登录书本纪" id="5z7-A5-YJN"/>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gte-H9-Rmw">
-                                <rect key="frame" x="57" y="150" width="300" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GgR-2d-Gdh">
-                                <rect key="frame" x="57" y="238" width="300" height="36"/>
+                                <rect key="frame" x="32" y="236" width="350" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdI-NB-ww5">
-                                <rect key="frame" x="57" y="342" width="300" height="50"/>
+                                <rect key="frame" x="32" y="342" width="350" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="0.87248501710000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -123,17 +116,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gte-H9-Rmw">
+                                <rect key="frame" x="32" y="150" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="v1u-av-4qh"/>
                     </view>
                     <navigationItem key="navigationItem" title="登录书本纪" id="tKn-PF-e9f">
-                        <barButtonItem key="backBarButtonItem" title="返回" id="uxk-MU-6Fo"/>
+                        <barButtonItem key="backBarButtonItem" title="取消" id="uxk-MU-6Fo"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aq-fl-mDE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2777" y="494"/>
+            <point key="canvasLocation" x="2777" y="422"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NZa-rU-ez9">
@@ -169,13 +169,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27k-LX-m8a">
-                                <rect key="frame" x="24" y="466" width="366" height="50"/>
+                                <rect key="frame" x="32" y="466" width="350" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="0.87248501710000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="确认登录">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="alx-6F-scH" kind="showDetail" id="v5Q-We-1sm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -184,7 +187,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K58-KF-efP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3944.9275362318845" y="787.5"/>
+            <point key="canvasLocation" x="4058" y="775"/>
+        </scene>
+        <!--书本纪/题库-->
+        <scene sceneID="CZ3-g1-yMv">
+            <objects>
+                <viewController id="qwT-2r-zxU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hwt-Mp-JYb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rpj-Gm-oeP"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="书本纪/题库" id="QGb-Wf-qdF">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="gSv-CA-OmW"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aO1-3D-UHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7179.7101449275369" y="774.77678571428567"/>
+        </scene>
+        <!--书本纪/课程-->
+        <scene sceneID="cSr-MI-mBx">
+            <objects>
+                <viewController id="Syw-RP-m3K" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gFt-no-giV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fBd-YY-dKp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="书本纪/课程" id="LUl-Kz-Rsv">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="qOu-wX-hpK"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EPn-uT-Pol" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7179.7101449275369" y="95.758928571428569"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="nV5-Jn-Iqs">
+            <objects>
+                <tabBarController id="alx-6F-scH" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0sK-WM-E3h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HBS-Vg-ule" kind="relationship" relationship="viewControllers" id="pKE-V8-HST"/>
+                        <segue destination="k9z-ZA-OnF" kind="relationship" relationship="viewControllers" id="FRq-NZ-wNm"/>
+                        <segue destination="m7E-nI-3kV" kind="relationship" relationship="viewControllers" id="ltC-sQ-NGP"/>
+                        <segue destination="d73-gM-Cef" kind="relationship" relationship="viewControllers" id="bxd-Yo-j7R"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9y3-5w-jx5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5290" y="775"/>
         </scene>
         <!--设置新密码-->
         <scene sceneID="FLg-uN-o48">
@@ -198,36 +257,29 @@
                                 <rect key="frame" x="106" y="97" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dcv-1n-Bfo">
-                                <rect key="frame" x="57" y="344" width="300" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MsO-5F-7b0">
-                                <rect key="frame" x="57" y="428" width="200" height="30"/>
+                                <rect key="frame" x="31" y="429" width="250" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请设置6-20位字符新密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqs-Vc-VKW">
-                                <rect key="frame" x="56" y="521" width="300" height="30"/>
+                                <rect key="frame" x="31" y="521" width="350" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="确认新密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="voO-69-sff">
-                                <rect key="frame" x="56" y="607" width="300" height="30"/>
+                                <rect key="frame" x="31" y="608" width="350" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpG-tU-HSE">
-                                <rect key="frame" x="56" y="721" width="300" height="50"/>
+                                <rect key="frame" x="31" y="722" width="350" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="0.87248501710000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -239,21 +291,28 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldr-AC-qXj">
-                                <rect key="frame" x="257" y="421" width="100" height="50"/>
+                                <rect key="frame" x="281" y="423" width="100" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="发送验证码"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dcv-1n-Bfo">
+                                <rect key="frame" x="31" y="344" width="350" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5rz-Ye-n01"/>
                     </view>
                     <navigationItem key="navigationItem" title="设置新密码" id="LSy-XT-fgr">
-                        <barButtonItem key="backBarButtonItem" title="返回" id="tke-JK-XB0"/>
+                        <barButtonItem key="backBarButtonItem" title="取消" id="tke-JK-XB0"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfB-EA-24w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2777" y="1218"/>
+            <point key="canvasLocation" x="2777" y="1215"/>
         </scene>
         <!--注册书本纪-->
         <scene sceneID="Dhj-Lc-TcQ">
@@ -262,14 +321,139 @@
                     <view key="view" contentMode="scaleToFill" id="a7Z-x6-HBx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="中国大陆(+86)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLN-RQ-GaK">
+                                <rect key="frame" x="32" y="150" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EiP-Dm-pWG">
+                                <rect key="frame" x="32" y="255" width="350" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="slO-ct-CZ2">
+                                <rect key="frame" x="32" y="360" width="250" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqu-Uv-d63">
+                                <rect key="frame" x="290" y="360" width="92" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="获取验证码">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ze4-hN-7dL">
+                                <rect key="frame" x="32" y="562" width="350" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="0.87248501710000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="下一步">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UIy-Ty-ID8" kind="show" id="TK3-AF-TB7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="NQe-Dg-UiH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="注册书本纪" id="PXD-wa-bsi"/>
+                    <navigationItem key="navigationItem" title="注册书本纪" id="PXD-wa-bsi">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="00O-SM-xEk"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HrJ-Hs-xGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2777" y="-178"/>
+            <point key="canvasLocation" x="2777" y="-309"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EEf-Ak-h5p">
+            <objects>
+                <viewController id="UIy-Ty-ID8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="riU-IL-Jp2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="注册手机号:18611110000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hDM-L9-xsy">
+                                <rect key="frame" x="44" y="149" width="350" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="设置密码:需包含数字和字母且八位以上十二位一下" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7HV-Jq-zbm">
+                                <rect key="frame" x="44" y="228" width="350" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DM1-Ju-8XC">
+                                <rect key="frame" x="44" y="391" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="0.87248501710000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="江苏省">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lf-0J-7b5">
+                                <rect key="frame" x="169" y="391" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="0.87248501710000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="南京市">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSB-jl-cFc">
+                                <rect key="frame" x="294" y="391" width="100" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="0.87248501710000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="鼓楼区">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E6C-V8-pwr">
+                                <rect key="frame" x="0.0" y="555" width="414" height="341"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtw-jx-4oS">
+                                <rect key="frame" x="44" y="489" width="350" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="0.87248501710000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="注  册">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="abD-70-zxS" kind="show" id="Rhv-wm-g1v"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="地址:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdn-wF-TfG">
+                                <rect key="frame" x="44" y="311" width="69" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4yE-eN-0sV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bZT-Jd-Y7L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3941" y="-309"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EPt-NC-zWe">
@@ -289,16 +473,165 @@
             </objects>
             <point key="canvasLocation" x="580" y="25"/>
         </scene>
+        <!--书本纪/互答-->
+        <scene sceneID="eVY-aZ-1uZ">
+            <objects>
+                <viewController id="xz0-gg-8qW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nnc-eK-uz2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vv-gs-npT">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="语文吧"/>
+                                <connections>
+                                    <segue destination="DQy-Td-RuB" kind="show" id="2Kd-CU-zCp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cDb-Hk-CIb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="书本纪/互答" id="95l-p2-sRL">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="Acd-9O-mNS"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVM-8Q-1yJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7179.7101449275369" y="1502.6785714285713"/>
+        </scene>
+        <!--圈子主页-->
+        <scene sceneID="SnG-6e-0ds">
+            <objects>
+                <viewController id="DQy-Td-RuB" customClass="HomePageViewController" customModule="Knowledge_Discipline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z31-nB-LeF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gBW-u2-LLd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="圈子主页" id="RTZ-X9-FOa">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="mkL-06-Fpj"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V6e-l8-iYw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8583" y="1503"/>
+        </scene>
+        <!--书本纪/我的-->
+        <scene sceneID="O6s-7T-6L3">
+            <objects>
+                <viewController id="6kx-fc-XaP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nHp-hj-1hU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="K2M-OA-dxh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="书本纪/我的" id="USG-rx-VCv">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="M2Z-bl-kr1"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAn-A6-ICu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7179.7101449275369" y="2178.3482142857142"/>
+        </scene>
+        <!--互答-->
+        <scene sceneID="kup-cQ-dhH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m7E-nI-3kV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="互答" image="AnswerIcon" selectedImage="AnswerIcon_selected" id="CrX-qJ-Ifp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PXb-4O-bRd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xz0-gg-8qW" kind="relationship" relationship="rootViewController" id="Zcu-6G-7nU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kXa-mR-vry" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6269.5652173913049" y="1502.6785714285713"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="grG-W5-gYt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d73-gM-Cef" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="ProfileIcon" selectedImage="ProfileIcon_selected" id="oCW-j4-rar"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eJo-Ik-bFl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6kx-fc-XaP" kind="relationship" relationship="rootViewController" id="XfW-Zh-xT5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vh6-xQ-fo9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6269.5652173913049" y="2178.3482142857142"/>
+        </scene>
+        <!--题库-->
+        <scene sceneID="0FV-DO-WJR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k9z-ZA-OnF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="题库" image="ItemBankIcon" selectedImage="ItemBankIcon_selected" id="Jjj-Nw-Gmm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cKO-37-aRe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qwT-2r-zxU" kind="relationship" relationship="rootViewController" id="1i6-Hv-g9o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GPS-Jq-gT0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6269.5652173913049" y="774.77678571428567"/>
+        </scene>
+        <!--课程-->
+        <scene sceneID="CjF-je-hT6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HBS-Vg-ule" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="课程" image="CourseIcon" selectedImage="CourseIcon_selected" id="Jo2-l9-Sgv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dNJ-UZ-eUg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Syw-RP-m3K" kind="relationship" relationship="rootViewController" id="tNL-G7-zte"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="89U-KQ-nDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6269.5652173913049" y="95.758928571428569"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="AnswerIcon" width="12" height="8.6666669845581055"/>
+        <image name="AnswerIcon_selected" width="11.666666984558105" height="8.3333330154418945"/>
+        <image name="CourseIcon" width="9" height="8.6666669845581055"/>
+        <image name="CourseIcon_selected" width="9.3333330154418945" height="8.6666669845581055"/>
         <image name="Image_qq" width="62" height="62"/>
         <image name="Image_wechat" width="60.333332061767578" height="60.333332061767578"/>
+        <image name="ItemBankIcon" width="9.3333330154418945" height="8.6666669845581055"/>
+        <image name="ItemBankIcon_selected" width="9.3333330154418945" height="9.3333330154418945"/>
         <image name="Logo_Icon" width="100" height="100"/>
+        <image name="ProfileIcon" width="9.3333330154418945" height="9.6666669845581055"/>
+        <image name="ProfileIcon_selected" width="9.3333330154418945" height="9.3333330154418945"/>
         <image name="bg_main" width="360" height="640"/>
         <image name="btn_Login" width="126.66666412353516" height="50"/>
         <image name="btn_Register" width="126.66666412353516" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6YC-YX-r3o"/>
+        <segue reference="me0-T1-dhQ"/>
+        <segue reference="5Rk-17-5Sw"/>
     </inferredMetricsTieBreakers>
 </document>
