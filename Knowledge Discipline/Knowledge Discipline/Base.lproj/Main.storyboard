@@ -214,6 +214,12 @@
                     <view key="view" contentMode="scaleToFill" id="gFt-no-giV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Course_banner" translatesAutoresizingMaskIntoConstraints="NO" id="Jbq-w2-q51">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fBd-YY-dKp"/>
                     </view>
@@ -567,6 +573,129 @@
                     <view key="view" contentMode="scaleToFill" id="nHp-hj-1hU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="WCq-zs-7JC">
+                                <rect key="frame" x="20" y="126" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="微信用户xi5jgh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmm-If-HDE">
+                                <rect key="frame" x="98" y="147" width="156" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23.209999084472656"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntb-UB-DhN">
+                                <rect key="frame" x="294" y="146" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4924772473942739" green="0.82041660848607079" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17.559999465942383"/>
+                                <state key="normal" title="签  到">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qkZ-V9-h2v">
+                                <rect key="frame" x="0.0" y="218" width="414" height="179"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTG-ZA-Ok2">
+                                        <rect key="frame" x="8" y="8" width="398" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="购课单                                                                &gt;">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gM5-Xu-UGx">
+                                        <rect key="frame" x="8" y="61" width="398" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="待付款                                                                &gt;">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YV-ky-HWu">
+                                        <rect key="frame" x="8" y="114" width="398" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="优惠券                                                                &gt;">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xTz-R8-Vnm">
+                                <rect key="frame" x="0.0" y="405" width="414" height="225"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i30-2o-HoH">
+                                        <rect key="frame" x="8" y="8" width="398" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="我的积分                                                             &gt;">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgF-D0-8cD">
+                                        <rect key="frame" x="8" y="61" width="398" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="我的邀请码                                                         &gt;">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ut3-IY-U9G">
+                                        <rect key="frame" x="8" y="114" width="398" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="我的奖学金                                                         &gt;">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zuB-oo-F6R">
+                                        <rect key="frame" x="8" y="163" width="398" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="申请邀请码                                                         &gt;">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jhr-0K-sw7">
+                                <rect key="frame" x="0.0" y="638" width="414" height="164"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bu-XJ-dPn">
+                                        <rect key="frame" x="8" y="8" width="398" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="分享APP                                                             &gt;">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B35-44-oCV">
+                                        <rect key="frame" x="8" y="60" width="398" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="安全反馈                                                             &gt;">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBQ-fd-U0h">
+                                        <rect key="frame" x="8" y="111" width="398" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="客服中心                                                             &gt;">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="K2M-OA-dxh"/>
                     </view>
@@ -660,6 +789,7 @@
         <image name="AnswerIcon_selected" width="11.666666984558105" height="8.3333330154418945"/>
         <image name="CourseIcon" width="9" height="8.6666669845581055"/>
         <image name="CourseIcon_selected" width="9.3333330154418945" height="8.6666669845581055"/>
+        <image name="Course_banner" width="128.66667175292969" height="221.66667175292969"/>
         <image name="Image_qq" width="62" height="62"/>
         <image name="Image_wechat" width="60.333332061767578" height="60.333332061767578"/>
         <image name="ItemBankIcon" width="9.3333330154418945" height="8.6666669845581055"/>
