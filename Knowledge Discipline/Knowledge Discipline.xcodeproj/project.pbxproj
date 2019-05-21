@@ -16,6 +16,10 @@
 		E6D60D8C2290090C002DDB86 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D60D8B2290090C002DDB86 /* HomePageViewController.swift */; };
 		E6FC3E772290562300558252 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FC3E762290562300558252 /* PageContentView.swift */; };
 		E6FC3E79229058BB00558252 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FC3E78229058BB00558252 /* Common.swift */; };
+		E6FC3E7B2294090D00558252 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FC3E7A2294090D00558252 /* UIColor-Extension.swift */; };
+		E6FC3E7D2294104B00558252 /* EssenceAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FC3E7C2294104B00558252 /* EssenceAreaViewController.swift */; };
+		E6FC3E7F2294107E00558252 /* AllPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FC3E7E2294107E00558252 /* AllPostsViewController.swift */; };
+		E6FC3E83229410CD00558252 /* ContributionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FC3E82229410CD00558252 /* ContributionListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		E6D60D8B2290090C002DDB86 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		E6FC3E762290562300558252 /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		E6FC3E78229058BB00558252 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		E6FC3E7A2294090D00558252 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		E6FC3E7C2294104B00558252 /* EssenceAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssenceAreaViewController.swift; sourceTree = "<group>"; };
+		E6FC3E7E2294107E00558252 /* AllPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPostsViewController.swift; sourceTree = "<group>"; };
+		E6FC3E82229410CD00558252 /* ContributionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +70,62 @@
 		E6D60D76228DD3B7002DDB86 /* Knowledge Discipline */ = {
 			isa = PBXGroup;
 			children = (
+				E6FC3E842294115300558252 /* Answer */,
+				E6FC3E882294115300558252 /* tools */,
 				E6D60D77228DD3B7002DDB86 /* AppDelegate.swift */,
 				E6D60D79228DD3B7002DDB86 /* ViewController.swift */,
 				E6D60D7B228DD3B7002DDB86 /* Main.storyboard */,
-				E6D60D8B2290090C002DDB86 /* HomePageViewController.swift */,
-				E6FC3E78229058BB00558252 /* Common.swift */,
-				E6D60D892290007F002DDB86 /* PageTitleView.swift */,
-				E6FC3E762290562300558252 /* PageContentView.swift */,
 				E6D60D7E228DD3B9002DDB86 /* Assets.xcassets */,
 				E6D60D80228DD3B9002DDB86 /* LaunchScreen.storyboard */,
 				E6D60D83228DD3B9002DDB86 /* Info.plist */,
 			);
 			path = "Knowledge Discipline";
+			sourceTree = "<group>";
+		};
+		E6FC3E842294115300558252 /* Answer */ = {
+			isa = PBXGroup;
+			children = (
+				E6D60D8B2290090C002DDB86 /* HomePageViewController.swift */,
+				E6D60D892290007F002DDB86 /* PageTitleView.swift */,
+				E6FC3E762290562300558252 /* PageContentView.swift */,
+				E6FC3E852294115300558252 /* ContributionList */,
+				E6FC3E862294115300558252 /* AllPosts */,
+				E6FC3E872294115300558252 /* EssenceArea */,
+			);
+			path = Answer;
+			sourceTree = "<group>";
+		};
+		E6FC3E852294115300558252 /* ContributionList */ = {
+			isa = PBXGroup;
+			children = (
+				E6FC3E82229410CD00558252 /* ContributionListViewController.swift */,
+			);
+			path = ContributionList;
+			sourceTree = "<group>";
+		};
+		E6FC3E862294115300558252 /* AllPosts */ = {
+			isa = PBXGroup;
+			children = (
+				E6FC3E7E2294107E00558252 /* AllPostsViewController.swift */,
+			);
+			path = AllPosts;
+			sourceTree = "<group>";
+		};
+		E6FC3E872294115300558252 /* EssenceArea */ = {
+			isa = PBXGroup;
+			children = (
+				E6FC3E7C2294104B00558252 /* EssenceAreaViewController.swift */,
+			);
+			path = EssenceArea;
+			sourceTree = "<group>";
+		};
+		E6FC3E882294115300558252 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				E6FC3E7A2294090D00558252 /* UIColor-Extension.swift */,
+				E6FC3E78229058BB00558252 /* Common.swift */,
+			);
+			path = tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,11 +199,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6FC3E7D2294104B00558252 /* EssenceAreaViewController.swift in Sources */,
 				E6D60D8C2290090C002DDB86 /* HomePageViewController.swift in Sources */,
 				E6D60D8A2290007F002DDB86 /* PageTitleView.swift in Sources */,
 				E6D60D7A228DD3B7002DDB86 /* ViewController.swift in Sources */,
 				E6FC3E772290562300558252 /* PageContentView.swift in Sources */,
 				E6FC3E79229058BB00558252 /* Common.swift in Sources */,
+				E6FC3E83229410CD00558252 /* ContributionListViewController.swift in Sources */,
+				E6FC3E7F2294107E00558252 /* AllPostsViewController.swift in Sources */,
+				E6FC3E7B2294090D00558252 /* UIColor-Extension.swift in Sources */,
 				E6D60D78228DD3B7002DDB86 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

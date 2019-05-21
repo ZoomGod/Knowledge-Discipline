@@ -30,10 +30,12 @@ class HomePageViewController: UIViewController {
         var childVcs = [UIViewController]()
         for _ in 0..<3 {
             let vc = UIViewController()
-            vc.view.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+            //vc.view.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             childVcs.append(vc)
         }
         let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
+        contentView.delegate = self
         return contentView
     }()
     
@@ -46,10 +48,16 @@ class HomePageViewController: UIViewController {
     }
 }
 
-
 //MARK:- 遵守PageTitleViewDelegate协议
 extension HomePageViewController : PageTitleViewDelegate {
     func pageTitleView(titleView: PageTitleView, selectedIndex index: Int){
         pageContentView.setCurrentIndex(currentIndex: index)
+    }
+}
+
+//MARK:- 遵守PageContentViewDelegate协议
+extension HomePageViewController : PageContentViewDelegate {
+    func pageContentView(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }

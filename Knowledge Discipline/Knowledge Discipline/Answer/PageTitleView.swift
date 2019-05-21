@@ -8,12 +8,17 @@
 
 import UIKit
 
+//MARK:- 定义协议
 protocol PageTitleViewDelegate : class {
     func pageTitleView(titleView : PageTitleView, selectedIndex index : Int)
 }
 
+//MARK:- 定义常量
 private let kscrollLineH : CGFloat = 2
+private let kNormalColor : (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
+private let kSelectColor : (CGFloat, CGFloat, CGFloat) = (0, 177, 244)
 
+//MARK:- 定义PageTitleView类
 class PageTitleView: UIView {
     
     //MARK:- 定义属性
@@ -80,7 +85,7 @@ extension PageTitleView {
             label.text = title
             label.tag = index
             label.font = UIFont.systemFont(ofSize: 18)
-            label.textColor = UIColor.black
+            label.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
             label.textAlignment = .center
             
             //设置label的frame
@@ -109,7 +114,7 @@ extension PageTitleView {
         //添加scrollLine
         //获取第一个label
         guard let firstLabel = titleLables.first else{ return }
-        firstLabel.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+        firstLabel.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
         //设置scrollLine的属性
         scrollView.addSubview(scrollLine)
         scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - kscrollLineH, width: firstLabel.frame.width, height: kscrollLineH)
@@ -126,8 +131,8 @@ extension PageTitleView {
         let oldLabel = titleLables[currentIndex]
         
         //切换文字的颜色
-        currentLabel.textColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        oldLabel.textColor = UIColor.darkGray
+        currentLabel.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
+        oldLabel.textColor = UIColor(r: kNormalColor.0, g: kNormalColor.1, b: kNormalColor.2)
         
         //保存最新Label的下标
         currentIndex = currentLabel.tag
@@ -140,5 +145,32 @@ extension PageTitleView {
         
         //通知代理
         delegate?.pageTitleView(titleView: self, selectedIndex: currentIndex)
+    }
+}
+
+//MARK:- 对外暴露的方法
+extension PageTitleView {
+    func setTitleWithProgress(progress : CGFloat, sourceIndex : Int, targetIndex : Int) {
+        //取出sourceLabel/targetLabel
+        let sourceLabel = titleLables[sourceIndex]
+        let targetLabel = titleLables[targetIndex]
+        
+        //处理滑块逻辑
+        let moveTotalX = targetLabel.frame.origin.x - sourceLabel.frame.origin.x
+        let moveX = moveTotalX * progress
+        scrollLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
+        
+    //颜色渐变
+        //取出变化范围
+        let colorDelta = (kSelectColor.0 - kNormalColor.0, kSelectColor.1 - kNormalColor.1, kSelectColor.2 - kNormalColor.2)
+        
+        //变化sourceLabel
+        sourceLabel.textColor = UIColor(r: kSelectColor.0 - colorDelta.0 * progress, g: kSelectColor.1 - colorDelta.1 * progress, b: kSelectColor.2 - colorDelta.2 * progress)
+        
+        //变化targetLabel
+        targetLabel.textColor = UIColor(r: kNormalColor.0 + colorDelta.0 * progress, g: kNormalColor.1 + colorDelta.1 * progress, b: kNormalColor.2 + colorDelta.2 * progress)
+        
+        //记录最新的index
+        currentIndex = targetIndex
     }
 }
