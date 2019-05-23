@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Knowledge Discipline
 //
-//  Created by 朱敏 on 2019/5/17.
+//  Created by / on 2019/5/17.
 //  Copyright © 2019 Ora. All rights reserved.
 //
 

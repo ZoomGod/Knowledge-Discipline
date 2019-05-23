@@ -2,7 +2,7 @@
 //  EssenceAreaViewController.swift
 //  Knowledge Discipline
 //
-//  Created by 朱敏 on 2019/5/21.
+//  Created by / on 2019/5/21.
 //  Copyright © 2019 Ora. All rights reserved.
 //
 
